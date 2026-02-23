@@ -22,7 +22,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Layer 0: Background image */}
       <Image
-        src="/images/hero/hero-bg.jpg"
+        src="/images/hero/hero-bg.png"
         alt=""
         fill
         className="object-cover opacity-20"
