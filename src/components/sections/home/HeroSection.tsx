@@ -34,7 +34,7 @@ export default function HeroSection() {
       <AnimatedGrid />
 
       {/* Layer 2: Gradient overlay */}
-      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/40 via-white/20 to-white/60" : "bg-gradient-to-b from-background/60 via-background/40 to-background/80"}`} />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/20 via-transparent to-white/40" : "bg-gradient-to-b from-background/60 via-background/40 to-background/80"}`} />
 
       {/* Layer 3: Gold sparkle particles */}
       <GoldSparkles count={35} speed={0.25} className="opacity-60" />

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useTheme } from "@/components/layout/ThemeProvider";
 import FadeIn from "@/components/animation/FadeIn";
 import MagneticButton from "@/components/animation/MagneticButton";
 import GoldSparkles from "@/components/animation/GoldSparkles";
@@ -10,6 +11,8 @@ import { Calendar, ArrowRight } from "lucide-react";
 
 export default function CTASection() {
   const t = useTranslations("home.cta");
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   return (
     <section className="py-32 relative overflow-hidden">
@@ -23,7 +26,7 @@ export default function CTASection() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/60 via-white/40 to-white/70" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
 
       {/* Sparkles */}
       <GoldSparkles count={20} speed={0.15} className="opacity-40" />
