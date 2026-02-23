@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import { useTheme } from "@/components/layout/ThemeProvider";
 
 const shapes = [
   { type: "circle", x: "10%", y: "20%", size: 60, speed: 0.2, opacity: 0.06, rotation: 0 },
@@ -14,14 +15,14 @@ const shapes = [
   { type: "diamond", x: "60%", y: "30%", size: 25, speed: 0.3, opacity: 0.08, rotation: 45 },
 ];
 
-function ShapeSVG({ type, size }: { type: string; size: number }) {
+function ShapeSVG({ type, size, strokeColor }: { type: string; size: number; strokeColor: string }) {
   const halfSize = size / 2;
 
   switch (type) {
     case "circle":
       return (
         <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-          <circle cx={halfSize} cy={halfSize} r={halfSize - 2} fill="none" stroke="rgba(201,168,76,1)" strokeWidth="1" />
+          <circle cx={halfSize} cy={halfSize} r={halfSize - 2} fill="none" stroke={strokeColor} strokeWidth="1" />
         </svg>
       );
     case "hexagon": {
@@ -32,14 +33,14 @@ function ShapeSVG({ type, size }: { type: string; size: number }) {
       }).join(" ");
       return (
         <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-          <polygon points={points} fill="none" stroke="rgba(201,168,76,1)" strokeWidth="1" />
+          <polygon points={points} fill="none" stroke={strokeColor} strokeWidth="1" />
         </svg>
       );
     }
     case "line":
       return (
         <svg width={size} height={2} viewBox={`0 0 ${size} 2`}>
-          <line x1="0" y1="1" x2={size} y2="1" stroke="rgba(201,168,76,1)" strokeWidth="1" />
+          <line x1="0" y1="1" x2={size} y2="1" stroke={strokeColor} strokeWidth="1" />
         </svg>
       );
     case "diamond":
@@ -48,7 +49,7 @@ function ShapeSVG({ type, size }: { type: string; size: number }) {
           <polygon
             points={`${halfSize},2 ${size - 2},${halfSize} ${halfSize},${size - 2} 2,${halfSize}`}
             fill="none"
-            stroke="rgba(201,168,76,1)"
+            stroke={strokeColor}
             strokeWidth="1"
           />
         </svg>
@@ -60,6 +61,8 @@ function ShapeSVG({ type, size }: { type: string; size: number }) {
 
 export default function FloatingShapes({ className = "" }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
+  const strokeColor = theme === "light" ? "rgba(37,99,235,0.6)" : "rgba(201,168,76,1)";
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
@@ -68,7 +71,7 @@ export default function FloatingShapes({ className = "" }: { className?: string 
   return (
     <div ref={containerRef} className={`absolute inset-0 overflow-hidden pointer-events-none ${className}`} aria-hidden="true">
       {shapes.map((shape, i) => (
-        <FloatingShape key={i} shape={shape} scrollYProgress={scrollYProgress} />
+        <FloatingShape key={i} shape={shape} scrollYProgress={scrollYProgress} strokeColor={strokeColor} />
       ))}
     </div>
   );
@@ -77,9 +80,11 @@ export default function FloatingShapes({ className = "" }: { className?: string 
 function FloatingShape({
   shape,
   scrollYProgress,
+  strokeColor,
 }: {
   shape: (typeof shapes)[number];
   scrollYProgress: ReturnType<typeof useScroll>["scrollYProgress"];
+  strokeColor: string;
 }) {
   const y = useTransform(scrollYProgress, [0, 1], [0, -200 * shape.speed]);
 
@@ -94,7 +99,7 @@ function FloatingShape({
         y,
       }}
     >
-      <ShapeSVG type={shape.type} size={shape.size} />
+      <ShapeSVG type={shape.type} size={shape.size} strokeColor={strokeColor} />
     </motion.div>
   );
 }

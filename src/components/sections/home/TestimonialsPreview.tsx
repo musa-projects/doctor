@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import FadeIn from "@/components/animation/FadeIn";
+import { useTheme } from "@/components/layout/ThemeProvider";
 import { motion } from "motion/react";
 import { testimonials } from "@/data/testimonials";
 import { Star, Quote } from "lucide-react";
@@ -9,19 +10,21 @@ import { Star, Quote } from "lucide-react";
 export default function TestimonialsPreview() {
   const tHome = useTranslations("home.testimonials");
   const tTestimonials = useTranslations("testimonials");
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   return (
     <section className="py-24 relative overflow-hidden bg-mesh">
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section header */}
         <FadeIn className="text-center mb-16">
-          <p className="text-gold text-sm tracking-[0.2em] uppercase mb-3">
+          <p className={`text-sm tracking-[0.2em] uppercase mb-3 ${isLight ? "text-blue" : "text-gold"}`}>
             {tHome("subtitle")}
           </p>
           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-4">
             {tHome("title")}
           </h2>
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent mx-auto mt-6" />
+          <div className={`w-16 h-px bg-gradient-to-r from-transparent ${isLight ? "via-blue/50" : "via-gold/50"} to-transparent mx-auto mt-6`} />
         </FadeIn>
 
         {/* Testimonial cards */}
@@ -35,8 +38,8 @@ export default function TestimonialsPreview() {
               <div className="card-luxury p-8 h-full flex flex-col group">
                 {/* Quote icon — large decorative */}
                 <div className="relative mb-4">
-                  <Quote className="w-10 h-10 text-gold/20 group-hover:text-gold/30 transition-all duration-500 group-hover:scale-110" />
-                  <div className="absolute top-0 left-0 w-10 h-10 blur-xl bg-gold/5 group-hover:bg-gold/10 transition-all duration-500" />
+                  <Quote className={`w-10 h-10 transition-all duration-500 group-hover:scale-110 ${isLight ? "text-blue/25 group-hover:text-blue/35" : "text-gold/20 group-hover:text-gold/30"}`} />
+                  <div className={`absolute top-0 left-0 w-10 h-10 blur-xl transition-all duration-500 ${isLight ? "bg-blue/5 group-hover:bg-blue/10" : "bg-gold/5 group-hover:bg-gold/10"}`} />
                 </div>
 
                 {/* Rating with sparkle effect */}
@@ -54,7 +57,7 @@ export default function TestimonialsPreview() {
                         damping: 15,
                       }}
                     >
-                      <Star className="w-4 h-4 fill-gold text-gold" />
+                      <Star className={`w-4 h-4 ${isLight ? "fill-blue text-blue" : "fill-gold text-gold"}`} />
                     </motion.div>
                   ))}
                 </div>
@@ -69,8 +72,8 @@ export default function TestimonialsPreview() {
                   <div className="flex items-center gap-3">
                     {/* Avatar with animated ring */}
                     <div className="relative">
-                      <div className="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center relative z-10">
-                        <span className="text-gold font-semibold text-sm">
+                      <div className={`w-11 h-11 rounded-full flex items-center justify-center relative z-10 ${isLight ? "bg-blue/10" : "bg-gold/10"}`}>
+                        <span className={`font-semibold text-sm ${isLight ? "text-blue" : "text-gold"}`}>
                           {tTestimonials(testimonial.nameKey)
                             .split(" ")
                             .map((n: string) => n[0])
@@ -81,7 +84,9 @@ export default function TestimonialsPreview() {
                       <div
                         className="absolute inset-[-2px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                         style={{
-                          background: "conic-gradient(from var(--border-angle, 0deg), transparent 60%, rgba(201,168,76,0.4) 80%, transparent 100%)",
+                          background: isLight
+                            ? "conic-gradient(from var(--border-angle, 0deg), transparent 60%, rgba(37,99,235,0.4) 80%, transparent 100%)"
+                            : "conic-gradient(from var(--border-angle, 0deg), transparent 60%, rgba(201,168,76,0.4) 80%, transparent 100%)",
                           animation: "border-rotate 3s linear infinite",
                         }}
                         aria-hidden="true"

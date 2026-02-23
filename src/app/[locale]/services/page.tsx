@@ -8,6 +8,7 @@ import FadeIn from "@/components/animation/FadeIn";
 import StaggerContainer, {
   StaggerItem,
 } from "@/components/animation/StaggerContainer";
+import { useTheme } from "@/components/layout/ThemeProvider";
 import { services } from "@/data/services";
 import {
   Bone,
@@ -32,6 +33,8 @@ const iconMap: Record<string, LucideIcon> = {
 export default function ServicesPage() {
   const tServices = useTranslations("services");
   const tCta = useTranslations("cta");
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   return (
     <PageWrapper>
@@ -72,20 +75,20 @@ export default function ServicesPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
                       <div className="absolute bottom-4 start-6">
-                        <div className="w-12 h-12 rounded-lg bg-gold/20 backdrop-blur-sm flex items-center justify-center border border-gold/20">
-                          <Icon className="w-6 h-6 text-gold" />
+                        <div className={`w-12 h-12 rounded-lg backdrop-blur-sm flex items-center justify-center border ${isLight ? "bg-blue/20 border-blue/20" : "bg-gold/20 border-gold/20"}`}>
+                          <Icon className={`w-6 h-6 ${isLight ? "text-blue" : "text-gold"}`} />
                         </div>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <h2 className="text-xl font-semibold font-serif mb-3 group-hover:text-gold transition-colors duration-300">
+                      <h2 className={`text-xl font-semibold font-serif mb-3 transition-colors duration-300 ${isLight ? "group-hover:text-blue" : "group-hover:text-gold"}`}>
                         {tServices(service.titleKey)}
                       </h2>
                       <p className="text-foreground-muted text-sm leading-relaxed mb-5">
                         {tServices(service.descriptionKey)}
                       </p>
-                      <span className="inline-flex items-center gap-1.5 text-gold text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                      <span className={`inline-flex items-center gap-1.5 text-sm font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 ${isLight ? "text-blue" : "text-gold"}`}>
                         {tCta("learnMore")}
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </span>

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import FadeIn from "@/components/animation/FadeIn";
+import { useTheme } from "./ThemeProvider";
 
 const quickLinks = [
   { key: "home", href: "/" },
@@ -25,15 +26,19 @@ const legalLinks = [
 export default function Footer() {
   const t = useTranslations();
   const currentYear = new Date().getFullYear();
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   return (
-    <footer className="relative bg-background-elevated overflow-hidden">
+    <footer className={`relative overflow-hidden ${isLight ? "bg-[#e2e8f0]" : "bg-background-elevated"}`}>
       {/* Animated top border */}
       <div className="relative h-px w-full overflow-hidden">
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.5) 50%, transparent 100%)",
+            background: isLight
+              ? "linear-gradient(90deg, transparent 0%, rgba(37,99,235,0.4) 50%, transparent 100%)"
+              : "linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.5) 50%, transparent 100%)",
             backgroundSize: "200% 100%",
             animation: "gradient-shift 4s ease infinite",
           }}
@@ -44,8 +49,9 @@ export default function Footer() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.02) 0%, transparent 50%)",
+          background: isLight
+            ? "radial-gradient(ellipse at 20% 80%, rgba(37,99,235,0.03) 0%, transparent 50%)"
+            : "radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.02) 0%, transparent 50%)",
         }}
         aria-hidden="true"
       />
@@ -79,7 +85,9 @@ export default function Footer() {
                       "flex h-10 w-10 items-center justify-center rounded-full",
                       "glass text-foreground-subtle text-xs",
                       "transition-all duration-300",
-                      "hover:glass-gold hover:text-gold hover:shadow-lg hover:shadow-gold/10"
+                      isLight
+                        ? "hover:glass-gold hover:text-blue hover:shadow-lg hover:shadow-blue/10"
+                        : "hover:glass-gold hover:text-gold hover:shadow-lg hover:shadow-gold/10"
                     )}
                     aria-label={platform}
                   >
@@ -93,7 +101,7 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <FadeIn direction="up" delay={0.1}>
             <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground">
-              <span className="w-6 h-px bg-gold/40" aria-hidden="true" />
+              <span className={`w-6 h-px ${isLight ? "bg-blue/40" : "bg-gold/40"}`} aria-hidden="true" />
               {t("footer.quickLinks")}
             </h3>
             <ul className="mt-4 space-y-3">
@@ -103,7 +111,7 @@ export default function Footer() {
                     href={link.href}
                     className={cn(
                       "text-sm text-foreground-muted transition-all duration-200",
-                      "hover:text-gold hover:ps-2"
+                      isLight ? "hover:text-blue hover:ps-2" : "hover:text-gold hover:ps-2"
                     )}
                   >
                     {t(`nav.${link.key}`)}
@@ -116,7 +124,7 @@ export default function Footer() {
           {/* Column 3: Legal */}
           <FadeIn direction="up" delay={0.2}>
             <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground">
-              <span className="w-6 h-px bg-gold/40" aria-hidden="true" />
+              <span className={`w-6 h-px ${isLight ? "bg-blue/40" : "bg-gold/40"}`} aria-hidden="true" />
               {t("footer.legal")}
             </h3>
             <ul className="mt-4 space-y-3">
@@ -126,7 +134,7 @@ export default function Footer() {
                     href={link.href}
                     className={cn(
                       "text-sm text-foreground-muted transition-all duration-200",
-                      "hover:text-gold hover:ps-2"
+                      isLight ? "hover:text-blue hover:ps-2" : "hover:text-gold hover:ps-2"
                     )}
                   >
                     {t(`footer.${link.key}`)}
@@ -139,7 +147,7 @@ export default function Footer() {
           {/* Column 4: Contact Info */}
           <FadeIn direction="up" delay={0.3}>
             <h3 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-foreground">
-              <span className="w-6 h-px bg-gold/40" aria-hidden="true" />
+              <span className={`w-6 h-px ${isLight ? "bg-blue/40" : "bg-gold/40"}`} aria-hidden="true" />
               {t("footer.contactInfo")}
             </h3>
             <ul className="mt-4 space-y-3 text-sm text-foreground-muted">
@@ -153,7 +161,7 @@ export default function Footer() {
                 <span className="block text-foreground-subtle text-xs uppercase tracking-wider mb-1">Phone</span>
                 <a
                   href="tel:+1234567890"
-                  className="transition-colors duration-200 hover:text-gold"
+                  className={`transition-colors duration-200 ${isLight ? "hover:text-blue" : "hover:text-gold"}`}
                 >
                   +1 (234) 567-890
                 </a>
@@ -162,7 +170,7 @@ export default function Footer() {
                 <span className="block text-foreground-subtle text-xs uppercase tracking-wider mb-1">Email</span>
                 <a
                   href="mailto:contact@drmitchell.com"
-                  className="transition-colors duration-200 hover:text-gold"
+                  className={`transition-colors duration-200 ${isLight ? "hover:text-blue" : "hover:text-gold"}`}
                 >
                   contact@drmitchell.com
                 </a>
