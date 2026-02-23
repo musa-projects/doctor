@@ -29,7 +29,7 @@ export default function DoctorBio() {
           <FadeIn direction="left">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden group">
               <Image
-                src="/images/about/doctor-portrait.jpg"
+                src="/images/about/doctor-portrait.png"
                 alt="Dr. Alexander Mitchell"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
