@@ -9,6 +9,7 @@ import ScrollProgress from "@/components/layout/ScrollProgress";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HtmlAttributes from "@/components/layout/HtmlAttributes";
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
 export default async function LocaleLayout({
   children,
@@ -28,11 +29,13 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <HtmlAttributes lang={locale} dir={direction} className={fontVariables} />
-      <ScrollProgress />
-      <Header />
-      <main className="pt-20">{children}</main>
-      <Footer />
+      <ThemeProvider>
+        <HtmlAttributes lang={locale} dir={direction} className={fontVariables} />
+        <ScrollProgress />
+        <Header />
+        <main className="pt-20">{children}</main>
+        <Footer />
+      </ThemeProvider>
     </NextIntlClientProvider>
   );
 }

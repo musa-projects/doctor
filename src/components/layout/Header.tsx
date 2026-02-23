@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { key: "home", href: "/" },
@@ -42,7 +43,7 @@ export default function Header() {
         className={cn(
           "fixed top-0 start-0 end-0 z-50 h-20 transition-all duration-700",
           isScrolled
-            ? "bg-background/60 backdrop-blur-2xl border-b border-white/[0.06] shadow-lg shadow-black/20"
+            ? "bg-background/60 backdrop-blur-2xl border-b border-border shadow-lg shadow-black/10"
             : "bg-transparent"
         )}
       >
@@ -98,6 +99,8 @@ export default function Header() {
             <div className="hidden lg:block">
               <LocaleSwitcher />
             </div>
+
+            <ThemeToggle />
 
             <motion.button
               type="button"

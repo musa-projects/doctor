@@ -65,7 +65,7 @@ export default function TestimonialsPreview() {
                 </p>
 
                 {/* Author */}
-                <div className="border-t border-white/[0.05] pt-5">
+                <div className="border-t border-border pt-5">
                   <div className="flex items-center gap-3">
                     {/* Avatar with animated ring */}
                     <div className="relative">

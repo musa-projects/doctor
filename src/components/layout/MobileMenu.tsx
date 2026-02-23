@@ -7,6 +7,7 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import LocaleSwitcher from "./LocaleSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -117,8 +118,12 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </ul>
             </div>
 
-            {/* Bottom section with locale switcher */}
-            <div className="border-t border-border p-6">
+            {/* Bottom section with locale switcher + theme toggle */}
+            <div className="border-t border-border p-6 space-y-4">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-foreground-subtle">Theme</span>
+                <ThemeToggle />
+              </div>
               <div className="flex items-center justify-between">
                 <span className="text-sm text-foreground-subtle">Language</span>
                 <LocaleSwitcher />

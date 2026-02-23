@@ -173,7 +173,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/[0.04]">
+      <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-6">
           <p className="text-sm text-foreground-subtle">
             &copy; {currentYear} Dr. Alexander Mitchell. {t("footer.rights")}.
