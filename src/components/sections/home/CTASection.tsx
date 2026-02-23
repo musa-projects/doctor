@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import FadeIn from "@/components/animation/FadeIn";
 import MagneticButton from "@/components/animation/MagneticButton";
@@ -12,18 +13,17 @@ export default function CTASection() {
 
   return (
     <section className="py-32 relative overflow-hidden">
-      {/* Background layers */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-              radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
-              radial-gradient(ellipse at 20% 80%, rgba(4,120,87,0.03) 0%, transparent 40%),
-              radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.03) 0%, transparent 40%)
-            `,
-        }}
-        aria-hidden="true"
+      {/* Background image */}
+      <Image
+        src="/images/cta-bg.png"
+        alt=""
+        fill
+        className="object-cover opacity-30"
+        sizes="100vw"
       />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background/80" />
 
       {/* Sparkles */}
       <GoldSparkles count={20} speed={0.15} className="opacity-40" />
