@@ -1,0 +1,16 @@
+{
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our practice and services.",
+    "items": {
+      "q1": {"question": "Do you accept insurance?", "answer": "Yes, we accept most major insurance plans including Blue Cross Blue Shield, Aetna, UnitedHealthcare, Cigna, Medicare, and Humana. Please contact our office to verify your specific plan coverage before your visit."},
+      "q2": {"question": "How do I schedule an appointment?", "answer": "You can schedule an appointment by calling our office, using our online booking form, or messaging us on WhatsApp. We typically respond within 24 hours to confirm your appointment."},
+      "q3": {"question": "What should I bring to my first visit?", "answer": "Please bring a valid photo ID, insurance card, referral letter (if required), list of current medications, and any relevant imaging studies. Arrive 15 minutes early to complete necessary paperwork."},
+      "q4": {"question": "How long is a typical consultation?", "answer": "Initial consultations typically last 30-45 minutes. This includes a thorough examination, review of imaging, discussion of diagnosis, and a detailed treatment plan. Follow-up visits are usually 15-20 minutes."},
+      "q5": {"question": "Do you offer emergency services?", "answer": "While we do not operate an emergency room, we prioritize urgent orthopedic cases and can often see patients within 24-48 hours. For life-threatening emergencies, please call 911."},
+      "q6": {"question": "What is the cancellation policy?", "answer": "We require 24 hours notice for appointment cancellations. Late cancellations or no-shows may be subject to a fee. We understand emergencies happen and handle each situation individually."},
+      "q7": {"question": "Do you offer virtual consultations?", "answer": "Yes, we offer telemedicine consultations for follow-up visits, second opinions, and initial screening. Virtual visits are conducted through a secure, HIPAA-compliant platform."},
+      "q8": {"question": "What is the recovery time for common procedures?", "answer": "Recovery varies by procedure. Arthroscopic surgery: 1-6 weeks. Joint replacement: 3-6 months. Fracture healing: 6-12 weeks. We provide detailed recovery timelines during your consultation based on your specific treatment plan."}
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Reach out through any of the channels below.",
+    "address": {
+      "title": "Our Location",
+      "street": "123 Medical Center Drive, Suite 400",
+      "city": "New York, NY 10001",
+      "country": "United States"
+    },
+    "phone": {
+      "title": "Phone",
+      "main": "+1 (555) 123-4567",
+      "fax": "+1 (555) 123-4568"
+    },
+    "email": {
+      "title": "Email",
+      "general": "info@drmitchell.com",
+      "appointments": "appointments@drmitchell.com"
+    },
+    "hours": {
+      "title": "Office Hours",
+      "weekday": "Monday - Friday",
+      "weekdayTime": "8:00 AM - 6:00 PM",
+      "saturday": "Saturday",
+      "saturdayTime": "9:00 AM - 2:00 PM",
+      "sunday": "Sunday",
+      "sundayTime": "Closed"
+    },
+    "directions": {
+      "title": "Getting Here",
+      "parking": "Free parking available in the building garage (Level B1 & B2)",
+      "transit": "Nearest subway: Central Medical Station (Lines 1, 2, 3) - 3 minute walk"
+    },
+    "map": {
+      "title": "Find Us on the Map"
+    }
+  }
+}

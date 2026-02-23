@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "booking": "Book Appointment",
+    "patientInfo": "Patient Info",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "disclaimer": "Medical Disclaimer",
+    "accessibility": "Accessibility",
+    "terms": "Terms of Service",
+    "description": "Providing exceptional orthopedic care with a commitment to patient well-being and advanced treatment solutions.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "contactInfo": "Contact Info"
+  },
+  "cta": {
+    "bookNow": "Book Appointment",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "whatsapp": "Chat on WhatsApp",
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "callNow": "Call Now",
+    "getDirections": "Get Directions"
+  },
+  "meta": {
+    "siteName": "Dr. Alexander Mitchell",
+    "specialty": "Orthopedic Surgery",
+    "siteDescription": "Board-certified orthopedic surgeon specializing in joint replacement, sports medicine, and minimally invasive procedures."
+  }
+}

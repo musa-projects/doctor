@@ -1,0 +1,39 @@
+{
+  "contact": {
+    "title": "צרו קשר",
+    "subtitle": "אנחנו כאן כדי לעזור. פנו אלינו דרך כל אחד מהערוצים למטה.",
+    "address": {
+      "title": "המיקום שלנו",
+      "street": "רחוב המרכז הרפואי 123, סוויטה 400",
+      "city": "ניו יורק, NY 10001",
+      "country": "ארצות הברית"
+    },
+    "phone": {
+      "title": "טלפון",
+      "main": "+1 (555) 123-4567",
+      "fax": "+1 (555) 123-4568"
+    },
+    "email": {
+      "title": "אימייל",
+      "general": "info@drmitchell.com",
+      "appointments": "appointments@drmitchell.com"
+    },
+    "hours": {
+      "title": "שעות קבלה",
+      "weekday": "שני - שישי",
+      "weekdayTime": "8:00 - 18:00",
+      "saturday": "שבת",
+      "saturdayTime": "9:00 - 14:00",
+      "sunday": "ראשון",
+      "sundayTime": "סגור"
+    },
+    "directions": {
+      "title": "הגעה אלינו",
+      "parking": "חניה חינם זמינה בחניון הבניין (קומות B1 ו-B2)",
+      "transit": "תחנת רכבת תחתית קרובה: תחנת המרכז הרפואי (קווים 1, 2, 3) - 3 דקות הליכה"
+    },
+    "map": {
+      "title": "מצאו אותנו במפה"
+    }
+  }
+}

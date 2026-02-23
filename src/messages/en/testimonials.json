@@ -1,0 +1,15 @@
+{
+  "testimonials": {
+    "title": "Patient Testimonials",
+    "subtitle": "Hear from patients who have experienced our care firsthand.",
+    "name1": "Sarah Johnson",
+    "role1": "Knee Replacement Patient",
+    "content1": "Dr. Mitchell gave me my life back. After years of chronic knee pain, the joint replacement surgery was seamless. His team was compassionate and professional throughout the entire process. I'm now walking pain-free and enjoying activities I thought were behind me.",
+    "name2": "David Cohen",
+    "role2": "Sports Injury Recovery",
+    "content2": "As a marathon runner, I feared my ACL tear would end my running career. Dr. Mitchell's expertise in sports medicine and his meticulous surgical approach had me back on the track in record time. His dedication to my recovery was extraordinary.",
+    "name3": "Amira Hassan",
+    "role3": "Spine Surgery Patient",
+    "content3": "I was terrified of spine surgery, but Dr. Mitchell's calm demeanor and thorough explanation of the procedure put my fears to rest. The minimally invasive approach meant I was home within days and back to work within weeks. Truly life-changing."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "home": {
+    "hero": {
+      "greeting": "Welcome to Excellence in",
+      "title": "Orthopedic Care",
+      "subtitle": "Board-certified orthopedic surgeon with over 15 years of experience in joint replacement, sports medicine, and minimally invasive surgical techniques.",
+      "cta": "Schedule Consultation",
+      "ctaSecondary": "Explore Services"
+    },
+    "trust": {
+      "experience": "Years of Experience",
+      "patients": "Patients Treated",
+      "rating": "Patient Rating",
+      "surgeries": "Successful Surgeries"
+    },
+    "services": {
+      "title": "Our Specializations",
+      "subtitle": "Comprehensive Care",
+      "viewAll": "View All Services"
+    },
+    "testimonials": {
+      "title": "What Our Patients Say",
+      "subtitle": "Real experiences from patients who trusted us with their care."
+    },
+    "cta": {
+      "title": "Ready to Take the First Step?",
+      "subtitle": "Schedule a consultation and let us create a personalized treatment plan for your needs.",
+      "button": "Book Your Appointment"
+    }
+  }
+}

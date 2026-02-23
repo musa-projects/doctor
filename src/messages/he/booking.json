@@ -1,0 +1,50 @@
+{
+  "booking": {
+    "title": "קביעת תור",
+    "subtitle": "קבעו ייעוץ עם ד\"ר מיטשל. נחזור אליכם תוך 24 שעות.",
+    "form": {
+      "name": "שם מלא",
+      "namePlaceholder": "הזינו את שמכם המלא",
+      "email": "כתובת אימייל",
+      "emailPlaceholder": "your@email.com",
+      "phone": "מספר טלפון",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "subject": "נושא",
+      "subjects": {
+        "general": "פנייה כללית",
+        "appointment": "תור חדש",
+        "followup": "ביקור מעקב",
+        "insurance": "שאלת ביטוח",
+        "other": "אחר"
+      },
+      "message": "הודעה",
+      "messagePlaceholder": "תארו את מצבכם או שאלתכם...",
+      "preferredContact": "אמצעי התקשרות מועדף",
+      "contactMethods": {
+        "email": "אימייל",
+        "phone": "טלפון",
+        "whatsapp": "וואטסאפ"
+      },
+      "submit": "שליחת הודעה",
+      "sending": "שולח...",
+      "success": "הודעתכם נשלחה בהצלחה. ניצור אתכם קשר תוך 24 שעות.",
+      "error": "אנא תקנו את השגיאות למטה."
+    },
+    "info": {
+      "title": "מידע על המרפאה",
+      "hours": "שעות קבלה",
+      "hoursWeekday": "שני - שישי: 8:00 - 18:00",
+      "hoursSaturday": "שבת: 9:00 - 14:00",
+      "hoursSunday": "ראשון: סגור",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@drmitchell.com",
+      "address": "רחוב המרכז הרפואי 123, סוויטה 400\nניו יורק, NY 10001",
+      "emergency": "במקרה של חירום רפואי, אנא התקשרו ל-911 או פנו לחדר מיון הקרוב אליכם."
+    },
+    "whatsapp": {
+      "title": "מעדיפים וואטסאפ?",
+      "description": "שוחחו איתנו ישירות לתגובות מהירות וקביעת תורים בקלות.",
+      "button": "שוחחו בוואטסאפ"
+    }
+  }
+}

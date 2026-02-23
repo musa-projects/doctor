@@ -1,0 +1,44 @@
+{
+  "patientInfo": {
+    "title": "Patient Information",
+    "subtitle": "Everything you need to know before your visit.",
+    "checklist": {
+      "title": "Before Your Visit",
+      "items": {
+        "item1": "Bring a valid photo ID and insurance card",
+        "item2": "Arrive 15 minutes early to complete paperwork",
+        "item3": "Bring a list of current medications",
+        "item4": "Bring any relevant imaging (X-rays, MRI scans)",
+        "item5": "Wear comfortable, loose-fitting clothing",
+        "item6": "Prepare a list of questions for the doctor",
+        "item7": "Arrange transportation if sedation is planned",
+        "item8": "Fast for 8 hours if instructed for pre-operative visit"
+      }
+    },
+    "documents": {
+      "title": "Required Documents",
+      "items": {
+        "item1": {"name": "Photo ID", "description": "Government-issued identification (passport, driver's license)"},
+        "item2": {"name": "Insurance Card", "description": "Primary and secondary insurance cards"},
+        "item3": {"name": "Referral Letter", "description": "From your primary care physician (if required by insurance)"},
+        "item4": {"name": "Medical Records", "description": "Previous treatment records related to your condition"},
+        "item5": {"name": "Imaging Results", "description": "X-rays, MRI, or CT scans on CD or digital format"}
+      }
+    },
+    "insurance": {
+      "title": "Insurance & Payment",
+      "description": "We accept most major insurance plans. Please contact our office to verify your coverage.",
+      "accepted": "Accepted Insurance Plans",
+      "plans": {
+        "plan1": "Blue Cross Blue Shield",
+        "plan2": "Aetna",
+        "plan3": "UnitedHealthcare",
+        "plan4": "Cigna",
+        "plan5": "Medicare",
+        "plan6": "Humana"
+      },
+      "selfPay": "Self-Pay Options",
+      "selfPayDesc": "We offer competitive self-pay rates and flexible payment plans. Contact our billing department for details."
+    }
+  }
+}

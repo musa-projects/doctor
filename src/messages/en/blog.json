@@ -1,0 +1,14 @@
+{
+  "blog": {
+    "title": "Health & Wellness Blog",
+    "subtitle": "Expert insights on orthopedic health, recovery, and wellness.",
+    "readMore": "Read Article",
+    "minRead": "min read",
+    "by": "By",
+    "publishedOn": "Published on",
+    "allArticles": "All Articles",
+    "tags": "Tags",
+    "relatedArticles": "Related Articles",
+    "backToBlog": "Back to Blog"
+  }
+}

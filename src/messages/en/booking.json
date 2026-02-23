@@ -1,0 +1,50 @@
+{
+  "booking": {
+    "title": "Book an Appointment",
+    "subtitle": "Schedule a consultation with Dr. Mitchell. We'll get back to you within 24 hours.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "subject": "Subject",
+      "subjects": {
+        "general": "General Inquiry",
+        "appointment": "New Appointment",
+        "followup": "Follow-up Visit",
+        "insurance": "Insurance Question",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Describe your condition or question...",
+      "preferredContact": "Preferred Contact Method",
+      "contactMethods": {
+        "email": "Email",
+        "phone": "Phone",
+        "whatsapp": "WhatsApp"
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully. We'll contact you within 24 hours.",
+      "error": "Please correct the errors below."
+    },
+    "info": {
+      "title": "Clinic Information",
+      "hours": "Office Hours",
+      "hoursWeekday": "Monday - Friday: 8:00 AM - 6:00 PM",
+      "hoursSaturday": "Saturday: 9:00 AM - 2:00 PM",
+      "hoursSunday": "Sunday: Closed",
+      "phone": "+1 (555) 123-4567",
+      "email": "info@drmitchell.com",
+      "address": "123 Medical Center Drive, Suite 400\nNew York, NY 10001",
+      "emergency": "For medical emergencies, please call 911 or go to your nearest emergency room."
+    },
+    "whatsapp": {
+      "title": "Prefer WhatsApp?",
+      "description": "Chat with us directly for quick responses and easy appointment scheduling.",
+      "button": "Chat on WhatsApp"
+    }
+  }
+}

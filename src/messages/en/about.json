@@ -1,0 +1,64 @@
+{
+  "about": {
+    "title": "About Dr. Mitchell",
+    "subtitle": "Dedicated to advancing orthopedic excellence and patient-centered care.",
+    "bio": {
+      "greeting": "Meet Your Surgeon",
+      "description": "With over 15 years of experience in orthopedic surgery, Dr. Alexander Mitchell has dedicated his career to helping patients regain their mobility and quality of life. Trained at some of the world's most prestigious medical institutions, he combines cutting-edge surgical techniques with a deeply personal approach to patient care.",
+      "description2": "Dr. Mitchell believes that every patient deserves to understand their condition fully and to be actively involved in their treatment decisions. This philosophy of transparent, collaborative care has earned him the trust of thousands of patients."
+    },
+    "education": {
+      "title": "Education & Training",
+      "item1": {
+        "year": "2005",
+        "title": "Doctor of Medicine (M.D.)",
+        "institution": "Harvard Medical School",
+        "description": "Graduated with honors, specializing in musculoskeletal medicine"
+      },
+      "item2": {
+        "year": "2010",
+        "title": "Residency in Orthopedic Surgery",
+        "institution": "Mayo Clinic",
+        "description": "Five-year residency program with focus on joint reconstruction"
+      },
+      "item3": {
+        "year": "2012",
+        "title": "Fellowship in Sports Medicine",
+        "institution": "Hospital for Special Surgery, NYC",
+        "description": "Advanced training in arthroscopic surgery and sports injuries"
+      },
+      "item4": {
+        "year": "2015",
+        "title": "Advanced Certification",
+        "institution": "American Board of Orthopedic Surgery",
+        "description": "Board certification with subspecialty in adult reconstruction"
+      }
+    },
+    "certifications": {
+      "title": "Certifications & Memberships",
+      "item1": "American Board of Orthopedic Surgery",
+      "item2": "Fellow, American Academy of Orthopedic Surgeons",
+      "item3": "International Society of Arthroscopy",
+      "item4": "American Medical Association",
+      "item5": "Sports Medicine Research Council",
+      "item6": "European Federation of Orthopedics"
+    },
+    "philosophy": {
+      "title": "My Philosophy",
+      "quote": "I believe in treating the whole person, not just the condition. Every patient who walks through my door deserves compassion, transparency, and the highest standard of care. My goal is not simply to perform surgery — it's to restore your ability to live the life you love.",
+      "author": "Dr. Alexander Mitchell"
+    },
+    "message": {
+      "title": "A Personal Message",
+      "content": "Thank you for considering me for your orthopedic care. I understand that seeking medical treatment can be daunting, and I want you to know that my team and I are here to support you every step of the way. From your first consultation to your final follow-up, we are committed to making your experience as comfortable and successful as possible.",
+      "signature": "Dr. Alexander Mitchell, M.D., FAAOS"
+    },
+    "languages": {
+      "title": "Languages Spoken",
+      "item1": "English",
+      "item2": "Arabic",
+      "item3": "Hebrew",
+      "item4": "French"
+    }
+  }
+}
