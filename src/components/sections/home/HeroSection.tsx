@@ -25,7 +25,7 @@ export default function HeroSection() {
         src="/images/hero/hero-bg.png"
         alt=""
         fill
-        className="object-cover opacity-20"
+        className="object-cover opacity-50"
         sizes="100vw"
         priority
       />
@@ -34,7 +34,7 @@ export default function HeroSection() {
       <AnimatedGrid />
 
       {/* Layer 2: Gradient overlay */}
-      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/70 via-white/50 to-white/90" : "bg-gradient-to-b from-background/80 via-background/60 to-background"}`} />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/40 via-white/20 to-white/60" : "bg-gradient-to-b from-background/60 via-background/40 to-background/80"}`} />
 
       {/* Layer 3: Gold sparkle particles */}
       <GoldSparkles count={35} speed={0.25} className="opacity-60" />
