@@ -46,9 +46,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute top-1/4 end-1/4 w-[500px] h-[500px] rounded-full"
         style={{
-          background: isLight
-            ? "radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 60%)"
-            : "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 60%)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 60%)",
         }}
         animate={{
           scale: [1, 1.3, 1],
@@ -59,9 +57,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute bottom-1/4 start-1/4 w-[400px] h-[400px] rounded-full"
         style={{
-          background: isLight
-            ? "radial-gradient(circle, rgba(37,99,235,0.04) 0%, transparent 60%)"
-            : "radial-gradient(circle, rgba(4,120,87,0.04) 0%, transparent 60%)",
+          background: "radial-gradient(circle, rgba(4,120,87,0.04) 0%, transparent 60%)",
         }}
         animate={{
           scale: [1.2, 1, 1.2],
@@ -71,8 +67,8 @@ export default function HeroSection() {
       />
 
       {/* Accent lines */}
-      <div className={`absolute start-0 top-0 h-full w-px bg-gradient-to-b from-transparent ${isLight ? "via-blue/10" : "via-gold/10"} to-transparent`} />
-      <div className={`absolute end-0 top-0 h-full w-px bg-gradient-to-b from-transparent ${isLight ? "via-blue/10" : "via-gold/10"} to-transparent`} />
+      <div className="absolute start-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-gold/10 to-transparent" />
+      <div className="absolute end-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-gold/10 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -109,7 +105,7 @@ export default function HeroSection() {
             <MagneticButton strength={0.2}>
               <Link
                 href="/booking"
-                className={`group relative inline-flex items-center gap-2.5 px-8 py-4 text-lg font-semibold rounded-[var(--radius-button)] shadow-lg transition-all duration-500 overflow-hidden ${isLight ? "bg-gradient-to-r from-blue via-blue-light to-blue text-white shadow-blue/25 hover:shadow-xl hover:shadow-blue/35" : "bg-gradient-to-r from-gold via-gold-light to-gold text-background shadow-gold/25 hover:shadow-xl hover:shadow-gold/35"}`}
+                className="group relative inline-flex items-center gap-2.5 px-8 py-4 text-lg font-semibold rounded-[var(--radius-button)] shadow-lg transition-all duration-500 overflow-hidden bg-gradient-to-r from-gold via-gold-light to-gold text-background shadow-gold/25 hover:shadow-xl hover:shadow-gold/35"
               >
                 {/* Shimmer sweep */}
                 <span
@@ -128,7 +124,7 @@ export default function HeroSection() {
             <MagneticButton strength={0.15}>
               <Link
                 href="/services"
-                className={`group inline-flex items-center gap-2.5 px-8 py-4 text-lg font-medium rounded-[var(--radius-button)] transition-all duration-500 ${isLight ? "text-blue border border-blue/30 hover:bg-blue/10 hover:border-blue hover:shadow-lg hover:shadow-blue/10" : "text-gold border border-gold/30 hover:bg-gold/10 hover:border-gold hover:shadow-lg hover:shadow-gold/10"}`}
+                className="group inline-flex items-center gap-2.5 px-8 py-4 text-lg font-medium rounded-[var(--radius-button)] transition-all duration-500 text-gold border border-gold/30 hover:bg-gold/10 hover:border-gold hover:shadow-lg hover:shadow-gold/10"
               >
                 {t("ctaSecondary")}
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -144,18 +140,18 @@ export default function HeroSection() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className={`w-8 h-12 rounded-full border flex justify-center pt-2 glow-gold ${isLight ? "border-blue/20" : "border-gold/20"}`}>
+        <div className="w-8 h-12 rounded-full border flex justify-center pt-2 glow-gold border-gold/20">
           <motion.div
-            className={`w-1 h-2.5 rounded-full ${isLight ? "bg-blue" : "bg-gold"}`}
+            className="w-1 h-2.5 rounded-full bg-gold"
             animate={{ opacity: [1, 0.2, 1], y: [0, 8, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
-        <ChevronDown className={`w-4 h-4 ${isLight ? "text-blue/30" : "text-gold/30"}`} />
+        <ChevronDown className="w-4 h-4 text-gold/30" />
       </motion.div>
 
       {/* Bottom fade */}
-      <div className={`absolute bottom-0 left-0 right-0 h-32 pointer-events-none ${isLight ? "bg-gradient-to-t from-[#f8fafc] to-transparent" : "bg-gradient-to-t from-background to-transparent"}`} />
+      <div className={`absolute bottom-0 left-0 right-0 h-32 pointer-events-none ${isLight ? "bg-gradient-to-t from-[#fafafa] to-transparent" : "bg-gradient-to-t from-background to-transparent"}`} />
     </section>
   );
 }

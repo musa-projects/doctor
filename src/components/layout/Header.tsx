@@ -9,7 +9,6 @@ import { cn } from "@/lib/utils";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
-import { useTheme } from "./ThemeProvider";
 
 const navItems = [
   { key: "home", href: "/" },
@@ -25,8 +24,6 @@ const navItems = [
 export default function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
-  const { theme } = useTheme();
-  const isLight = theme === "light";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -58,9 +55,7 @@ export default function Header() {
           >
             <span className={cn(
               "transition-all duration-500",
-              isLight
-                ? (isScrolled ? "text-glow-gold text-blue" : "text-blue")
-                : (isScrolled ? "text-glow-gold text-gold" : "text-gold")
+              isScrolled ? "text-glow-gold text-gold" : "text-gold"
             )}>
               Dr.
             </span>
@@ -82,7 +77,7 @@ export default function Header() {
                   className={cn(
                     "relative px-3 py-2 text-sm transition-colors duration-300 rounded-md",
                     isActive
-                      ? (isLight ? "text-blue" : "text-gold")
+                      ? "text-gold"
                       : "text-foreground-muted hover:text-foreground"
                   )}
                 >
@@ -90,7 +85,7 @@ export default function Header() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className={`absolute inset-x-3 -bottom-0.5 h-[2px] bg-gradient-to-r ${isLight ? "from-blue/0 via-blue to-blue/0" : "from-gold/0 via-gold to-gold/0"}`}
+                      className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-gradient-to-r from-gold/0 via-gold to-gold/0"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -132,9 +127,7 @@ export default function Header() {
             isScrolled ? "opacity-100" : "opacity-0"
           )}
           style={{
-            background: isLight
-              ? "linear-gradient(90deg, transparent, rgba(37,99,235,0.12), transparent)"
-              : "linear-gradient(90deg, transparent, rgba(201,168,76,0.15), transparent)",
+            background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.15), transparent)",
           }}
         />
       </header>
