@@ -21,12 +21,12 @@ export default function CTASection() {
         src="/images/cta-bg.png"
         alt=""
         fill
-        className="object-cover opacity-30"
+        className={`object-cover ${isLight ? "opacity-50" : "opacity-30"}`}
         sizes="100vw"
       />
 
       {/* Overlay */}
-      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/60 via-white/40 to-white/70" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/10 via-transparent to-white/20" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
 
       {/* Sparkles */}
       <GoldSparkles count={20} speed={0.15} className="opacity-40" />
