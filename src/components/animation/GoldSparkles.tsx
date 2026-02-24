@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useTheme } from "@/components/layout/ThemeProvider";
 
 interface Particle {
   x: number;
@@ -26,7 +27,16 @@ const GOLD_COLORS = [
   "rgba(240, 208, 96,",
 ];
 
+const LIGHT_COLORS = [
+  "rgba(13, 115, 119,",
+  "rgba(20, 145, 155,",
+  "rgba(26, 82, 118,",
+  "rgba(15, 139, 141,",
+];
+
 export default function GoldSparkles({ count = 40, speed = 0.3, className = "" }: GoldSparklesProps) {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number>(0);
@@ -48,15 +58,16 @@ export default function GoldSparkles({ count = 40, speed = 0.3, className = "" }
     window.addEventListener("resize", resize);
 
     // Initialize particles
+    const colors = isLight ? LIGHT_COLORS : GOLD_COLORS;
     particlesRef.current = Array.from({ length: count }, () => ({
       x: Math.random() * canvas.offsetWidth,
       y: Math.random() * canvas.offsetHeight,
-      size: Math.random() * 2 + 1,
+      size: isLight ? Math.random() * 2.5 + 1.5 : Math.random() * 2 + 1,
       speedX: (Math.random() - 0.5) * speed,
       speedY: -(Math.random() * speed + 0.1),
       opacity: Math.random(),
       opacitySpeed: Math.random() * 0.02 + 0.005,
-      color: GOLD_COLORS[Math.floor(Math.random() * GOLD_COLORS.length)],
+      color: colors[Math.floor(Math.random() * colors.length)],
     }));
 
     const animate = () => {
@@ -93,7 +104,7 @@ export default function GoldSparkles({ count = 40, speed = 0.3, className = "" }
       cancelAnimationFrame(animationRef.current);
       window.removeEventListener("resize", resize);
     };
-  }, [count, speed]);
+  }, [count, speed, isLight]);
 
   return (
     <canvas

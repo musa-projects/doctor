@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTheme } from "@/components/layout/ThemeProvider";
 
 interface SectionDividerProps {
   variant?: "wave" | "angle" | "curve" | "dots";
@@ -16,6 +17,9 @@ const paths: Record<string, string> = {
 };
 
 export default function SectionDivider({ variant = "wave", className = "", flip = false }: SectionDividerProps) {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
   if (variant === "dots") {
     return (
       <div className={`relative py-8 flex justify-center ${className}`}>
@@ -26,15 +30,17 @@ export default function SectionDivider({ variant = "wave", className = "", flip 
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="w-1 h-1 rounded-full bg-gold/30" />
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-          <div className="w-2 h-2 rounded-full bg-gold/50 glow-gold" />
-          <div className="w-16 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-          <div className="w-1 h-1 rounded-full bg-gold/30" />
+          <div className={`w-1 h-1 rounded-full ${isLight ? "bg-[#0D7377]/30" : "bg-gold/30"}`} />
+          <div className={`w-16 h-px bg-gradient-to-r from-transparent ${isLight ? "via-[#0D7377]/40" : "via-gold/40"} to-transparent`} />
+          <div className={`w-2 h-2 rounded-full glow-gold ${isLight ? "bg-[#0D7377]/50" : "bg-gold/50"}`} />
+          <div className={`w-16 h-px bg-gradient-to-r from-transparent ${isLight ? "via-[#0D7377]/40" : "via-gold/40"} to-transparent`} />
+          <div className={`w-1 h-1 rounded-full ${isLight ? "bg-[#0D7377]/30" : "bg-gold/30"}`} />
         </motion.div>
       </div>
     );
   }
+
+  const gradientId = isLight ? "teal-gradient" : "gold-gradient";
 
   return (
     <div className={`relative w-full overflow-hidden ${flip ? "rotate-180" : ""} ${className}`} aria-hidden="true">
@@ -46,7 +52,7 @@ export default function SectionDivider({ variant = "wave", className = "", flip 
       >
         <motion.path
           d={paths[variant]}
-          stroke="url(#gold-gradient)"
+          stroke={`url(#${gradientId})`}
           strokeWidth="1.5"
           fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
@@ -55,13 +61,23 @@ export default function SectionDivider({ variant = "wave", className = "", flip 
           transition={{ duration: 1.5, ease: "easeInOut" }}
         />
         <defs>
-          <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="rgba(201, 168, 76, 0)" />
-            <stop offset="30%" stopColor="rgba(201, 168, 76, 0.4)" />
-            <stop offset="50%" stopColor="rgba(212, 175, 55, 0.6)" />
-            <stop offset="70%" stopColor="rgba(201, 168, 76, 0.4)" />
-            <stop offset="100%" stopColor="rgba(201, 168, 76, 0)" />
-          </linearGradient>
+          {isLight ? (
+            <linearGradient id="teal-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(13, 115, 119, 0)" />
+              <stop offset="30%" stopColor="rgba(13, 115, 119, 0.4)" />
+              <stop offset="50%" stopColor="rgba(20, 145, 155, 0.6)" />
+              <stop offset="70%" stopColor="rgba(13, 115, 119, 0.4)" />
+              <stop offset="100%" stopColor="rgba(13, 115, 119, 0)" />
+            </linearGradient>
+          ) : (
+            <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="rgba(201, 168, 76, 0)" />
+              <stop offset="30%" stopColor="rgba(201, 168, 76, 0.4)" />
+              <stop offset="50%" stopColor="rgba(212, 175, 55, 0.6)" />
+              <stop offset="70%" stopColor="rgba(201, 168, 76, 0.4)" />
+              <stop offset="100%" stopColor="rgba(201, 168, 76, 0)" />
+            </linearGradient>
+          )}
         </defs>
       </svg>
     </div>

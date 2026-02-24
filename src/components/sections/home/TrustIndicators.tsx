@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useTheme } from "@/components/layout/ThemeProvider";
 import CountUp from "@/components/animation/CountUp";
 import StaggerContainer, {
   StaggerItem,
@@ -15,14 +16,14 @@ const stats = [
   { key: "surgeries", value: 5000, suffix: "+", icon: HeartPulse, ringColor: "#c9a84c" },
 ];
 
-function ProgressRing({ delay = 0, color }: { delay?: number; color: string }) {
+function ProgressRing({ delay = 0, color, isLight = false }: { delay?: number; color: string; isLight?: boolean }) {
   return (
     <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 64 64">
       {/* Background ring */}
       <circle
         cx="32" cy="32" r="28"
         fill="none"
-        stroke="rgba(201,168,76,0.08)"
+        stroke={isLight ? "rgba(13,115,119,0.10)" : "rgba(201,168,76,0.08)"}
         strokeWidth="1"
       />
       {/* Animated ring */}
@@ -44,6 +45,10 @@ function ProgressRing({ delay = 0, color }: { delay?: number; color: string }) {
 
 export default function TrustIndicators() {
   const t = useTranslations("home.trust");
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
+  const lightRingColors = ["#0D7377", "#14919B", "#1A5276", "#0D7377"];
 
   return (
     <section className="py-24 relative overflow-hidden bg-mesh">
@@ -51,7 +56,9 @@ export default function TrustIndicators() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.03) 0%, transparent 60%)",
+          background: isLight
+            ? "radial-gradient(ellipse at 50% 0%, rgba(13,115,119,0.04) 0%, transparent 60%)"
+            : "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.03) 0%, transparent 60%)",
         }}
         aria-hidden="true"
       />
@@ -65,11 +72,12 @@ export default function TrustIndicators() {
                 <div className="relative w-16 h-16 mx-auto mb-5">
                   <ProgressRing
                     delay={index * 0.2}
-                    color={stat.ringColor}
+                    color={isLight ? lightRingColors[index] : stat.ringColor}
+                    isLight={isLight}
                   />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-500 bg-gold/10 group-hover:bg-gold/20">
-                      <stat.icon className="w-5 h-5 text-gold" />
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-500 ${isLight ? "bg-[#0D7377]/10 group-hover:bg-[#0D7377]/20" : "bg-gold/10 group-hover:bg-gold/20"}`}>
+                      <stat.icon className={`w-5 h-5 ${isLight ? "text-[#0D7377]" : "text-gold"}`} />
                     </div>
                   </div>
                 </div>

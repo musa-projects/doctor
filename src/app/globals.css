@@ -317,78 +317,138 @@ body {
 }
 
 /* ── Light Mode Overrides ── */
+/* ── Premium Light Mode ── */
 .light {
-  --color-background: #fafafa;
-  --color-background-elevated: #ebebeb;
-  --color-background-card: #ffffff;
-  --color-background-card-hover: #f5f5f5;
-  --color-background-input: #f5f5f5;
-  --color-foreground: #1a1a1a;
-  --color-foreground-muted: #333333;
-  --color-foreground-subtle: #737373;
-  --color-border: #e5e5e5;
-  --color-border-hover: #d4d4d4;
-  --color-error: #dc2626;
-  --color-success: #16a34a;
+  --color-background: #FDFBF7;
+  --color-background-elevated: #F5F0E8;
+  --color-background-card: #FFFFFF;
+  --color-background-card-hover: #FBF8F3;
+  --color-background-input: #F8F6F1;
+  --color-foreground: #1B2A3D;
+  --color-foreground-muted: #4A5568;
+  --color-foreground-subtle: #8896A6;
+  --color-border: #E8E2D9;
+  --color-border-hover: #D4C9BB;
+  --color-error: #DC2626;
+  --color-success: #16A34A;
 }
 
 .light .card-luxury {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(165deg, #FFFFFF 0%, #FEFCF9 60%, #FBF8F3 100%);
+  border: 1px solid rgba(212, 198, 174, 0.4);
+  box-shadow:
+    0 1px 2px rgba(27, 42, 61, 0.04),
+    0 4px 12px rgba(27, 42, 61, 0.06),
+    0 12px 36px rgba(27, 42, 61, 0.04);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .light .card-luxury:hover {
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(13, 115, 119, 0.35);
   box-shadow:
-    0 0 20px rgba(201, 168, 76, 0.08),
-    0 8px 30px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    0 1px 2px rgba(27, 42, 61, 0.04),
+    0 8px 24px rgba(13, 115, 119, 0.08),
+    0 20px 48px rgba(27, 42, 61, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .light .card-luxury::before {
   background: conic-gradient(
     from var(--border-angle, 0deg),
-    transparent 40%,
-    rgba(201, 168, 76, 0.2) 50%,
-    transparent 60%
+    transparent 35%,
+    rgba(13, 115, 119, 0.25) 50%,
+    transparent 65%
   );
 }
 
 .light .card-luxury::after {
-  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(13, 115, 119, 0.15), transparent);
 }
 
 .light .glass {
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(212, 198, 174, 0.3);
+  box-shadow: 0 2px 12px rgba(27, 42, 61, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .light .glass-gold {
-  background: rgba(201, 168, 76, 0.05);
-  border-color: rgba(201, 168, 76, 0.15);
+  background: rgba(253, 251, 247, 0.85);
+  border-color: rgba(13, 115, 119, 0.2);
+  box-shadow: 0 2px 16px rgba(13, 115, 119, 0.06);
+}
+
+.light .animated-gradient-text {
+  background: linear-gradient(90deg, #1A5276, #0D7377, #14919B, #0F8B8D, #1A5276);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s linear infinite;
+}
+
+.light .text-gradient-gold {
+  background: linear-gradient(135deg, #0D7377, #14919B, #1A8A8E, #14919B, #0D7377);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+.light .bg-mesh {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(13, 115, 119, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(26, 82, 118, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(184, 134, 11, 0.02) 0%, transparent 50%),
+    var(--color-background-elevated);
+}
+
+.light .glow-gold {
+  animation: none;
+  box-shadow: 0 0 8px rgba(13, 115, 119, 0.1), 0 0 20px rgba(13, 115, 119, 0.05);
+}
+
+.light .text-glow-gold {
+  animation: none;
+  text-shadow: 0 0 12px rgba(13, 115, 119, 0.15), 0 0 24px rgba(13, 115, 119, 0.05);
 }
 
 .light .shimmer-effect::after {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(201, 168, 76, 0.05) 45%,
-    rgba(201, 168, 76, 0.1) 50%,
-    rgba(201, 168, 76, 0.05) 55%,
+    rgba(13, 115, 119, 0.05) 45%,
+    rgba(13, 115, 119, 0.10) 50%,
+    rgba(13, 115, 119, 0.05) 55%,
     transparent 100%
   );
 }
 
 .light .gold-line-animated {
-  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(13, 115, 119, 0.35), transparent);
   background-size: 200% auto;
+}
+
+.light .scroll-progress {
+  background: linear-gradient(90deg, #0D7377, #14919B, #1A5276);
+  background-size: 200% auto;
+}
+
+.light ::selection {
+  background-color: rgba(13, 115, 119, 0.2);
+  color: #1B2A3D;
 }
 
 /* ── Focus styles ── */
 :focus-visible {
   outline: 2px solid rgba(201, 168, 76, 0.5);
+  outline-offset: 2px;
+}
+
+.light :focus-visible {
+  outline: 2px solid rgba(13, 115, 119, 0.5);
   outline-offset: 2px;
 }

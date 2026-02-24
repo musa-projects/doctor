@@ -26,19 +26,19 @@ export default function CTASection() {
       />
 
       {/* Overlay */}
-      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/5 via-transparent to-white/5" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-[#FDFBF7]/85 via-[#FDFBF7]/60 to-[#FDFBF7]/90" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
 
       {/* Sparkles */}
       <GoldSparkles count={20} speed={0.15} className="opacity-40" />
 
       {/* Floating decorative elements */}
-      <div className="absolute top-1/4 start-1/6 w-2 h-2 rounded-full float-animation bg-gold/20" style={{ animationDelay: "0s" }} />
-      <div className="absolute bottom-1/3 end-1/5 w-1.5 h-1.5 rounded-full float-animation bg-gold/15" style={{ animationDelay: "2s" }} />
-      <div className="absolute top-1/3 end-1/3 w-1 h-1 rounded-full float-animation bg-gold/25" style={{ animationDelay: "4s" }} />
+      <div className={`absolute top-1/4 start-1/6 w-2 h-2 rounded-full float-animation ${isLight ? "bg-[#0D7377]/20" : "bg-gold/20"}`} style={{ animationDelay: "0s" }} />
+      <div className={`absolute bottom-1/3 end-1/5 w-1.5 h-1.5 rounded-full float-animation ${isLight ? "bg-[#0D7377]/15" : "bg-gold/15"}`} style={{ animationDelay: "2s" }} />
+      <div className={`absolute top-1/3 end-1/3 w-1 h-1 rounded-full float-animation ${isLight ? "bg-[#0D7377]/25" : "bg-gold/25"}`} style={{ animationDelay: "4s" }} />
 
       {/* Border accents */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent" />
+      <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent ${isLight ? "via-[#0D7377]/10" : "via-gold/10"} to-transparent`} />
+      <div className={`absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent ${isLight ? "via-[#0D7377]/10" : "via-gold/10"} to-transparent`} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <FadeIn>
@@ -57,7 +57,7 @@ export default function CTASection() {
           <MagneticButton strength={0.15}>
             <Link
               href="/booking"
-              className="group relative inline-flex items-center gap-2.5 px-10 py-5 text-lg font-semibold rounded-[var(--radius-button)] shadow-xl transition-all duration-500 overflow-hidden glow-gold bg-gradient-to-r from-gold via-gold-light to-gold text-background shadow-gold/25 hover:shadow-2xl hover:shadow-gold/35"
+              className={`group relative inline-flex items-center gap-2.5 px-10 py-5 text-lg font-semibold rounded-[var(--radius-button)] shadow-xl transition-all duration-500 overflow-hidden ${isLight ? "bg-gradient-to-r from-[#0D7377] via-[#14919B] to-[#0D7377] text-white shadow-[#0D7377]/20 hover:shadow-2xl hover:shadow-[#0D7377]/30" : "glow-gold bg-gradient-to-r from-gold via-gold-light to-gold text-background shadow-gold/25 hover:shadow-2xl hover:shadow-gold/35"}`}
             >
               {/* Shimmer */}
               <span

@@ -46,7 +46,9 @@ export default function Header() {
         className={cn(
           "fixed top-0 start-0 end-0 z-50 h-20 transition-all duration-700",
           isScrolled
-            ? "bg-background/60 backdrop-blur-2xl border-b border-border shadow-lg shadow-black/10"
+            ? isLight
+              ? "bg-[#FDFBF7]/80 backdrop-blur-2xl border-b border-[#E8E2D9] shadow-lg shadow-[#1B2A3D]/5"
+              : "bg-background/60 backdrop-blur-2xl border-b border-border shadow-lg shadow-black/10"
             : "bg-transparent"
         )}
       >
@@ -81,7 +83,7 @@ export default function Header() {
                   className={cn(
                     "relative px-3 py-2 text-sm transition-colors duration-300 rounded-md",
                     isActive
-                      ? "text-gold"
+                      ? isLight ? "text-[#0D7377]" : "text-gold"
                       : "text-foreground-muted hover:text-foreground"
                   )}
                 >
@@ -89,7 +91,12 @@ export default function Header() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-gradient-to-r from-gold/0 via-gold to-gold/0"
+                      className={cn(
+                        "absolute inset-x-3 -bottom-0.5 h-[2px] bg-gradient-to-r",
+                        isLight
+                          ? "from-[#0D7377]/0 via-[#0D7377] to-[#0D7377]/0"
+                          : "from-gold/0 via-gold to-gold/0"
+                      )}
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -131,7 +138,9 @@ export default function Header() {
             isScrolled ? "opacity-100" : "opacity-0"
           )}
           style={{
-            background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.15), transparent)",
+            background: isLight
+              ? "linear-gradient(90deg, transparent, rgba(13,115,119,0.2), transparent)"
+              : "linear-gradient(90deg, transparent, rgba(201,168,76,0.15), transparent)",
           }}
         />
       </header>
