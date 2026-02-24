@@ -25,7 +25,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
       {/* Rating */}
       <div className="flex gap-1 mb-6">
         {Array.from({ length: testimonial.rating }).map((_, i) => (
-          <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+          <Star key={i} className="w-5 h-5 fill-[#D4A017] text-[#D4A017]" />
         ))}
       </div>
 

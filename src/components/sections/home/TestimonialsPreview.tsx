@@ -57,7 +57,7 @@ export default function TestimonialsPreview() {
                         damping: 15,
                       }}
                     >
-                      <Star className={`w-4 h-4 ${isLight ? "fill-[#D4A017] text-[#D4A017]" : "fill-gold text-gold"}`} />
+                      <Star className="w-4 h-4 fill-[#D4A017] text-[#D4A017]" />
                     </motion.div>
                   ))}
                 </div>

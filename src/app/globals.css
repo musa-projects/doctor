@@ -327,6 +327,9 @@ body {
   --color-foreground: #1B2A3D;
   --color-foreground-muted: #4A5568;
   --color-foreground-subtle: #8896A6;
+  --color-gold: #0D7377;
+  --color-gold-light: #14919B;
+  --color-gold-dark: #1A5276;
   --color-border: #E8E2D9;
   --color-border-hover: #D4C9BB;
   --color-error: #DC2626;
@@ -430,6 +433,14 @@ body {
 .light .gold-line-animated {
   background: linear-gradient(90deg, transparent, rgba(13, 115, 119, 0.35), transparent);
   background-size: 200% auto;
+}
+
+.light .bg-gradient-gold {
+  background: linear-gradient(135deg, rgba(13, 115, 119, 0.1) 0%, rgba(13, 115, 119, 0.05) 50%, transparent 100%);
+}
+
+.light .border-glow-gold {
+  box-shadow: 0 0 15px rgba(13, 115, 119, 0.1), 0 0 30px rgba(13, 115, 119, 0.03);
 }
 
 .light .scroll-progress {
