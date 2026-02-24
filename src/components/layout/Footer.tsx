@@ -56,6 +56,7 @@ export default function Footer() {
           <FadeIn direction="up" className="sm:col-span-2 lg:col-span-1">
             <Link
               href="/"
+              dir="ltr"
               className="inline-block font-serif text-xl tracking-wide"
             >
               <span className="text-gradient-gold">Dr.</span>{" "}

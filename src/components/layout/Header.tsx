@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MobileMenu from "./MobileMenu";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "./ThemeProvider";
 
 const navItems = [
   { key: "home", href: "/" },
@@ -26,6 +27,8 @@ export default function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme } = useTheme();
+  const isLight = theme === "light";
 
   useEffect(() => {
     function handleScroll() {
@@ -51,6 +54,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
+            dir="ltr"
             className="flex items-baseline gap-1 font-serif text-xl tracking-wide"
           >
             <span className={cn(
@@ -59,7 +63,7 @@ export default function Header() {
             )}>
               Dr.
             </span>
-            <span className="text-foreground">Reem</span>
+            <span className={isLight ? "text-[#1a1a1a]" : "text-foreground"}>Reem</span>
           </Link>
 
           {/* Desktop navigation */}
