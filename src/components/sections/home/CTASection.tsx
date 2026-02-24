@@ -26,7 +26,7 @@ export default function CTASection() {
       />
 
       {/* Overlay */}
-      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/10 via-transparent to-white/20" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
+      <div className={`absolute inset-0 ${isLight ? "bg-gradient-to-b from-white/5 via-transparent to-white/5" : "bg-gradient-to-b from-background/70 via-background/50 to-background/80"}`} />
 
       {/* Sparkles */}
       <GoldSparkles count={20} speed={0.15} className="opacity-40" />
