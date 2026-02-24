@@ -59,7 +59,7 @@ export default function Footer() {
               className="inline-block font-serif text-xl tracking-wide"
             >
               <span className="text-gradient-gold">Dr.</span>{" "}
-              <span className="text-foreground">Alexander Mitchell</span>
+              <span className="text-foreground">Reem Didaan</span>
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-foreground-muted">
               {t("footer.description")}
@@ -144,9 +144,9 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-foreground-muted">
               <li>
                 <span className="block text-foreground-subtle text-xs uppercase tracking-wider mb-1">Address</span>
-                123 Medical Center Drive
+                Rom Medical Center
                 <br />
-                Suite 456, New York, NY 10001
+                18 Alonim St., Ramat Yishai
               </li>
               <li>
                 <span className="block text-foreground-subtle text-xs uppercase tracking-wider mb-1">Phone</span>
@@ -160,10 +160,10 @@ export default function Footer() {
               <li>
                 <span className="block text-foreground-subtle text-xs uppercase tracking-wider mb-1">Email</span>
                 <a
-                  href="mailto:contact@drmitchell.com"
+                  href="mailto:contact@drreem.com"
                   className="transition-colors duration-200 hover:text-gold"
                 >
-                  contact@drmitchell.com
+                  contact@drreem.com
                 </a>
               </li>
             </ul>
@@ -175,7 +175,7 @@ export default function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-6">
           <p className="text-sm text-foreground-subtle">
-            &copy; {currentYear} Dr. Alexander Mitchell. {t("footer.rights")}.
+            &copy; {currentYear} Dr. Reem Salim Didaan. {t("footer.rights")}.
           </p>
         </div>
       </div>

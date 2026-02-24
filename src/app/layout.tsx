@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Dr. Alexander Mitchell | Orthopedic Surgeon",
-    template: "%s | Dr. Alexander Mitchell",
+    default: "Dr. Reem Salim Didaan | Orthopedics & Pediatric Orthopedics",
+    template: "%s | Dr. Reem Salim Didaan",
   },
   description:
-    "Board-certified orthopedic surgeon specializing in joint replacement, sports medicine, and minimally invasive procedures.",
+    "Specialist in orthopedics and pediatric orthopedics. Director of Pediatric Orthopedic Services at Zefat Hospital.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

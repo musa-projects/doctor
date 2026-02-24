@@ -1,64 +1,63 @@
 {
   "about": {
-    "title": "About Dr. Mitchell",
-    "subtitle": "Dedicated to advancing orthopedic excellence and patient-centered care.",
+    "title": "About Dr. Didaan",
+    "subtitle": "Dedicated to advancing pediatric and general orthopedic excellence with compassionate, patient-centered care.",
     "bio": {
-      "greeting": "Meet Your Surgeon",
-      "description": "With over 15 years of experience in orthopedic surgery, Dr. Alexander Mitchell has dedicated his career to helping patients regain their mobility and quality of life. Trained at some of the world's most prestigious medical institutions, he combines cutting-edge surgical techniques with a deeply personal approach to patient care.",
-      "description2": "Dr. Mitchell believes that every patient deserves to understand their condition fully and to be actively involved in their treatment decisions. This philosophy of transparent, collaborative care has earned him the trust of thousands of patients."
+      "greeting": "Meet Your Specialist",
+      "description": "Dr. Reem Salim Didaan is the Director of Pediatric Orthopedic Services at Zefat Hospital, specializing in both pediatric orthopedics and general orthopedics. A graduate of the Faculty of Medicine at the Technion, Israel, she completed her residency in orthopedics at Emek Medical Center in Afula and further honed her expertise through a fellowship in pediatric orthopedics at Hadassah Medical Center in Jerusalem.",
+      "description2": "Dr. Didaan believes that every patient — whether a child or an adult — deserves thorough, compassionate care and clear communication. Her philosophy centers on involving patients and their families in every step of the treatment process. This collaborative approach, combined with her specialized training, has earned her the trust of countless families throughout the region."
     },
     "education": {
       "title": "Education & Training",
       "item1": {
-        "year": "2005",
+        "year": "",
         "title": "Doctor of Medicine (M.D.)",
-        "institution": "Harvard Medical School",
-        "description": "Graduated with honors, specializing in musculoskeletal medicine"
+        "institution": "Faculty of Medicine – Technion, Israel",
+        "description": "Medical degree with a focus on musculoskeletal medicine"
       },
       "item2": {
-        "year": "2010",
-        "title": "Residency in Orthopedic Surgery",
-        "institution": "Mayo Clinic",
-        "description": "Five-year residency program with focus on joint reconstruction"
+        "year": "",
+        "title": "Residency in Orthopedics",
+        "institution": "Emek Medical Center, Afula",
+        "description": "Comprehensive orthopedic surgery residency program"
       },
       "item3": {
-        "year": "2012",
-        "title": "Fellowship in Sports Medicine",
-        "institution": "Hospital for Special Surgery, NYC",
-        "description": "Advanced training in arthroscopic surgery and sports injuries"
+        "year": "",
+        "title": "Fellowship in Pediatric Orthopedics",
+        "institution": "Hadassah Medical Center, Jerusalem",
+        "description": "Advanced training in pediatric orthopedic conditions and surgical techniques"
       },
       "item4": {
-        "year": "2015",
-        "title": "Advanced Certification",
-        "institution": "American Board of Orthopedic Surgery",
-        "description": "Board certification with subspecialty in adult reconstruction"
+        "year": "",
+        "title": "Advanced Courses & Certifications",
+        "institution": "Various Institutions",
+        "description": "Advanced Trauma Course (AO) – Tel Aviv Medical Center; Ultrasound for Musculoskeletal Diagnostics (GRAF, hip, shoulder); Clubfoot Treatment – PONSETI Method; Advanced Clubfoot (PONSETI) – Tel Aviv; Sports Medicine Examination Course"
       }
     },
     "certifications": {
       "title": "Certifications & Memberships",
-      "item1": "American Board of Orthopedic Surgery",
-      "item2": "Fellow, American Academy of Orthopedic Surgeons",
-      "item3": "International Society of Arthroscopy",
-      "item4": "American Medical Association",
-      "item5": "Sports Medicine Research Council",
-      "item6": "European Federation of Orthopedics"
+      "item1": "Advanced Trauma Course (AO) – Tel Aviv Medical Center",
+      "item2": "Ultrasound for Musculoskeletal Diagnostics (GRAF, hip, shoulder)",
+      "item3": "Clubfoot Treatment Course – PONSETI Method",
+      "item4": "Advanced Clubfoot (PONSETI) Course – Tel Aviv",
+      "item5": "Sports Medicine Examination Course",
+      "item6": "Israeli Pediatric Orthopedic Association"
     },
     "philosophy": {
       "title": "My Philosophy",
-      "quote": "I believe in treating the whole person, not just the condition. Every patient who walks through my door deserves compassion, transparency, and the highest standard of care. My goal is not simply to perform surgery — it's to restore your ability to live the life you love.",
-      "author": "Dr. Alexander Mitchell"
+      "quote": "I believe in treating the whole person, not just the condition. Every patient who walks through my door — child or adult — deserves compassion, transparency, and the highest standard of care. My goal is not simply to treat an injury — it's to restore your ability to live the life you love, free from pain and limitations.",
+      "author": "Dr. Reem Salim Didaan"
     },
     "message": {
       "title": "A Personal Message",
-      "content": "Thank you for considering me for your orthopedic care. I understand that seeking medical treatment can be daunting, and I want you to know that my team and I are here to support you every step of the way. From your first consultation to your final follow-up, we are committed to making your experience as comfortable and successful as possible.",
-      "signature": "Dr. Alexander Mitchell, M.D., FAAOS"
+      "content": "Thank you for considering me for your orthopedic care. I understand that seeking medical treatment — especially for your child — can be daunting, and I want you to know that my team and I are here to support you every step of the way. From your first consultation to your final follow-up, we are committed to making your experience as comfortable and successful as possible.",
+      "signature": "Dr. Reem Salim Didaan, M.D."
     },
     "languages": {
       "title": "Languages Spoken",
-      "item1": "English",
-      "item2": "Arabic",
-      "item3": "Hebrew",
-      "item4": "French"
+      "item1": "Hebrew",
+      "item2": "English",
+      "item3": "Arabic"
     }
   }
 }

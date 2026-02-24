@@ -30,7 +30,7 @@ export default function DoctorBio() {
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden group">
               <Image
                 src="/images/about/doctor-portrait.png"
-                alt="Dr. Alexander Mitchell"
+                alt="Dr. Reem Salim Didaan"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -71,7 +71,7 @@ export default function DoctorBio() {
                   {t("languages.title")}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {(["item1", "item2", "item3", "item4"] as const).map(
+                  {(["item1", "item2", "item3"] as const).map(
                     (key) => (
                       <span
                         key={key}

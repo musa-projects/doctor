@@ -59,7 +59,7 @@ export default function Header() {
             )}>
               Dr.
             </span>
-            <span className="text-foreground">Mitchell</span>
+            <span className="text-foreground">Reem</span>
           </Link>
 
           {/* Desktop navigation */}
